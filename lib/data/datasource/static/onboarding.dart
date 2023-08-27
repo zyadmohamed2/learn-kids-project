@@ -1,21 +1,22 @@
+import 'package:learn/constant/images.dart';
 import 'package:learn/data/model/onboarding_model.dart';
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
-    "assets/svg/supimage1.svg", 
-    "assets/gif/animation_lltaiylp_small.gif", 
-    "assets/svg/onboarding_text1.svg",
-    "assets/svg/background.svg"
+    AppImage.supImage1, 
+    AppImage.gifOnboarding1, 
+    AppImage.onboardingText1,
+    AppImage.backgroundOnboarding
   ),
   OnBoardingModel(
-    "assets/svg/supimage2.svg", 
-    "assets/gif/animation_lltakso0_small.gif", 
-    "assets/svg/onboarding_text2.svg",
-    "assets/svg/background.svg"
+    AppImage.supImage2, 
+    AppImage.gifOnboarding2, 
+    AppImage.onboardingText2,
+    AppImage.backgroundOnboarding
   ),
   OnBoardingModel(
-    "assets/svg/supimage3.svg", 
-    "assets/gif/animation_lltajg5v_small.gif", 
-    "assets/svg/onboarding_text3.svg",
-    "assets/svg/background_onboarding.svg"
+    AppImage.supImage3, 
+    AppImage.gifOnboarding3, 
+    AppImage.onboardingText3,
+    AppImage.backgroundOnboarding
   ),
 ];
