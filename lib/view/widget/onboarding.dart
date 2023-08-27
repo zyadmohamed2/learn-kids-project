@@ -7,40 +7,34 @@ import 'package:learn/view/widget/onboarding_stack.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter_svg/svg.dart';
 class OnBoardingWidge extends GetView<OnBoardingController> {
-  const OnBoardingWidge({super.key});
-  final bool isStack;
+  OnBoardingWidge({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 540.h,
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-      child: PageView(
+      child: PageView.builder(
         onPageChanged: (value) {
           controller.onPageChanged(value);
         },
         controller: controller.pageController,
-        children: [
-          ...List.generate(
-            onBoardingList.length, 
-            (index) {
-              return isStack? OnBoardingStack(): 
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    child: Image.asset(onBoardingList[index].supImage),
-                  ),
-                  Container(
-                    child: Lottie.asset(onBoardingList[index].gif),
-                  ),
-                  Container(
-                    child: SvgPicture.asset(onBoardingList[index].text)
-                  ),
-                ],
-              );
-            },
-          )
-        ],
+        itemCount: onBoardingList.length,
+        itemBuilder: (context, index) {
+          bool isStack = index > 0;
+          return isStack? OnBoardingStack(index: index,):Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                child: Image.asset(onBoardingList[index].supImage),
+              ),
+              Container(
+                child: Lottie.asset(onBoardingList[index].gif),
+              ),
+              Container(
+                child: SvgPicture.asset(onBoardingList[index].text)
+              ),
+            ],
+          );
+        },
       ),
     );
   }

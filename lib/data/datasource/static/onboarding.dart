@@ -8,7 +8,7 @@ List<OnBoardingModel> onBoardingList = [
     AppImage.backgroundOnboarding
   ),
   OnBoardingModel(
-    AppImage.supImage2, 
+    AppImage.supImage2,
     AppImage.gifOnboarding2, 
     AppImage.onboardingText2,
     AppImage.backgroundOnboarding
