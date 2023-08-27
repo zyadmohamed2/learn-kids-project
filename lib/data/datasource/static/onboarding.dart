@@ -1,5 +1,4 @@
 import 'package:learn/data/model/onboarding_model.dart';
-
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
     "assets/svg/supimage1.svg", 
