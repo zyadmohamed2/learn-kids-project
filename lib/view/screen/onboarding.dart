@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:learn/constant/images.dart';
+import 'package:learn/controller/onboarding_controller.dart';
 import 'package:learn/data/datasource/static/onboarding.dart';
+import 'package:learn/view/widget/custom_botton.dart';
+import 'package:learn/view/widget/dotsonboarding.dart';
 import 'package:learn/view/widget/onboarding.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -8,44 +12,32 @@ class OnBoarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(OnBoardingController());
     return Scaffold(
       body: Scaffold(
         body: Stack(
           children: [
-            const OnBoardingWidge(),
+            OnBoardingWidge(),
             SizedBox(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Container(
-                    height: 50,
-                    width: 80,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: onBoardingList.length,
-                      itemBuilder: (context, index) {
-                        return AnimatedContainer(
-                          margin: EdgeInsets.only(left: 10),
-                          duration: const Duration(milliseconds: 700),
-                          padding: const EdgeInsets.all(7),
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.red
-                          ),
-                        );
-                      },
-                    ),
+                  DotsOnBoarding(),
+                  SizedBox(height: 15,),
+                  CustomBotton(
+                    image: AppImage.bottonNext, 
+                    onTap: () {
+                      
+                    },
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Image.asset(AppImage.bottonNext)
+                  SizedBox(height: 15,),
+                  CustomBotton(
+                    image: AppImage.bottonSkip, 
+                    onTap: () {
+                      
+                    },
                   ),
-                  const SizedBox(height: 20,),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Image.asset(AppImage.bottonSkip)
-                  ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 15,),
                 ],
               ),
             ),
