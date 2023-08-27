@@ -7,7 +7,7 @@ import 'package:learn/view/widget/custom_botton.dart';
 import 'package:learn/view/widget/dotsonboarding.dart';
 import 'package:learn/view/widget/onboarding.dart';
 
-class OnBoarding extends StatelessWidget {
+class OnBoarding extends GetView<OnBoardingController> {
   const OnBoarding({super.key});
 
   @override
@@ -23,14 +23,14 @@ class OnBoarding extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   DotsOnBoarding(),
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
                   CustomBotton(
                     image: AppImage.bottonNext, 
                     onTap: () {
-                      
+                      controller.nextBotton();
                     },
                   ),
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
                   CustomBotton(
                     image: AppImage.bottonSkip, 
                     onTap: () {

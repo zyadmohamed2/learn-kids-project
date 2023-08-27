@@ -26,14 +26,9 @@ class OnBoardingController extends GetxController{
     curentPage = index;
     update();
   }
-  // color(int index, int Page){
-  //   if (index == Page) {
-  //     if (page == 1) {
-        
-  //     }
-  //     else if(page == 2)
-  //   }
-  // }
+  skip(){
+    
+  }
   @override
   void onInit() {
     pageController = PageController();

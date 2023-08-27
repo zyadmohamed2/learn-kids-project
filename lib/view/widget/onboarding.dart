@@ -24,12 +24,15 @@ class OnBoardingWidge extends GetView<OnBoardingController> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
+                height: 150.h,
                 child: Image.asset(onBoardingList[index].supImage),
               ),
               Container(
+                height: 230.h,
                 child: Lottie.asset(onBoardingList[index].gif),
               ),
               Container(
+                height: 140.h,
                 child: SvgPicture.asset(onBoardingList[index].text)
               ),
             ],
