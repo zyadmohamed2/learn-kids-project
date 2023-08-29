@@ -13,6 +13,7 @@ class OnBoardingController extends GetxController{
   int curentPage = 0;
   late PageController pageController;
   MyServic myServic = Get.find();
+  bool isClick = false;
   nextBotton(){
     curentPage++;
     if (curentPage == onBoardingList.length) {
