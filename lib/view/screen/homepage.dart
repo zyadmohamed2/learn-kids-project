@@ -21,13 +21,16 @@ class HomePage extends StatelessWidget{
                   SizedBox(
                     child: Stack(
                       children: [
-                        Image.asset(AppImage.backgroundHomepage),
+                        Container(
+                          width: double.infinity,
+                          child: Image.asset(AppImage.backgroundHomepage, fit: BoxFit.cover,),
+                        ),
                         Container(
                           margin: const EdgeInsets.only(top: 40),
                           height: 50,
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               GestureDetector(
                                 child: Image.asset(AppImage.menuIcon),
@@ -36,13 +39,11 @@ class HomePage extends StatelessWidget{
                                 width: 200,
                                 alignment: Alignment.center,
                                 height: 50,
-                                // margin: EdgeInsets.only(top: 15),
                                 child: Stack(
                                   children: [
                                     Positioned(
                                       top: 20,
                                       right: 15,
-                                      // margin: EdgeInsets.only(top: 15),
                                       child: Stack(
                                         children: [
                                           Container(
