@@ -17,7 +17,7 @@ class CustomNextBotton extends GetView<OnBoardingController> {
           color: AppColors.nextBotton,
           borderRadius: BorderRadius.circular(10),
           boxShadow: controller.isClick? const []:[
-            BoxShadow(color: AppColors.shadowColor, offset: Offset(0,6), blurRadius: 0, spreadRadius: 1),
+            const BoxShadow(color: AppColors.shadowColor, offset: Offset(0,6), blurRadius: 0, spreadRadius: 1),
           ]
         ),
         child: const Center(

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learn/constant/images.dart';
 import 'package:learn/controller/onboarding_controller.dart';
-import 'package:learn/view/widget/custom_botton.dart';
-import 'package:learn/view/widget/dotsonboarding.dart';
-import 'package:learn/view/widget/next_botton.dart';
-import 'package:learn/view/widget/onboarding.dart';
+import 'package:learn/view/widget/onboarding/custom_botton.dart';
+import 'package:learn/view/widget/onboarding/dotsonboarding.dart';
+import 'package:learn/view/widget/onboarding/next_botton.dart';
+import 'package:learn/view/widget/onboarding/onboarding.dart';
 
 import '../../constant/colors.dart';
 

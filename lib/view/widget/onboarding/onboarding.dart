@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:learn/controller/onboarding_controller.dart';
 import 'package:learn/data/datasource/static/onboarding.dart';
-import 'package:learn/view/widget/onboarding_stack.dart';
+import 'package:learn/view/widget/onboarding/onboarding_stack.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter_svg/svg.dart';
 class OnBoardingWidge extends GetView<OnBoardingController> {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:learn/services/services.dart';
-import 'package:learn/view/screen/onboarding.dart';
+import 'package:learn/view/screen/homepage.dart';
 void main() {
   runApp(const MyApp());
   initialServiecs();
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const OnBoarding()
+          home: const HomePage()
         );
       },
     );
