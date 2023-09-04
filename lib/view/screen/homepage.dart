@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget{
                   SizedBox(
                     child: Stack(
                       children: [
-                        Container(
+                        SizedBox(
                           width: double.infinity,
                           child: Image.asset(AppImage.backgroundHomepage, fit: BoxFit.cover,),
                         ),
@@ -67,9 +67,7 @@ class HomePage extends StatelessWidget{
                                       ),
                                       Positioned(
                                         left: -10,
-                                        child: Container(
-                                          child: Image.asset(AppImage.lionCharacterIcon)
-                                        ),
+                                        child: Image.asset(AppImage.lionCharacterIcon),
                                       ),
                                   ],
                                 ),
@@ -88,7 +86,7 @@ class HomePage extends StatelessWidget{
                     top: 120,
                     child: Image.asset(AppImage.getReadyImage),
                   ),
-                  Cards()
+                  const Cards(),
                 ],
               ),
             ],

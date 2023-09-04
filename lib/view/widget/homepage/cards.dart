@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learn/controller/homepage_controller.dart';
+import 'package:learn/view/screen/home_screen.dart';
+import 'package:learn/view/screen/letters_screen.dart';
 
 class Cards extends GetView<HomePageController> {
   const Cards({super.key});
@@ -18,6 +20,7 @@ class Cards extends GetView<HomePageController> {
                 return GestureDetector(
                   onTap: () {
                     controller.goToExample(index);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 10, bottom: 10),
